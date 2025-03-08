@@ -10,6 +10,6 @@ $$
 M_{ij}^\alpha(t)
 $$
 
-Using computational simulations, this powerful representational paradigm helps us analyze exquisitely complicated entities and processes. J.L. Austin famously said, Oversimplification is the disease of philosophy. But if philosophers engage with complex systems the disease need not be terminal.
+where $i,j$ are entities, $\alpha$ is their relationship. Using computational simulations, this powerful representational paradigm helps us analyze exquisitely complicated entities and processes. J.L. Austin famously said, Oversimplification is the disease of philosophy. But if philosophers engage with complex systems the disease need not be terminal.
 
 Some of the recent topics I have studied are content-driven social networks, valuative judgment, and mental illness. I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy.
