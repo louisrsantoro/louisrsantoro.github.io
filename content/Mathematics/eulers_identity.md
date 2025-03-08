@@ -6,7 +6,9 @@ tags: [math, philosophy, introductory]
 
 Euler's identity is often celebrated as one of mathematics' most beautiful equations:
 
-$$ e^{i\pi} + 1 = 0 $$
+$$
+e^{i\pi} + 1 = 0
+$$
 
 At first glance, this elegant formula may seem mysterious or even paradoxical. It combines five fundamental constants:
 
@@ -26,7 +28,9 @@ $$
 
 Which leads directly to the famous identity:
 
-$$ e^{i\pi} + 1 = 0 $$
+$$
+e^{i\pi} + 1 = 0
+$$
 
 This equation is striking because it brings together concepts from algebra, geometry, and complex analysis, demonstrating a deep unity in mathematics.
 

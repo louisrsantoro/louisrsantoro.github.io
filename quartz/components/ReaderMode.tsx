@@ -55,7 +55,7 @@ ReaderMode.css = `
 #reader-mode-button {
   width: 60px;
   height: 60px;
-  padding: 0.8rem;
+  padding: 0.5rem;
   border: 2px solid var(--lightgray);
   border-radius: 8px;
   background: var(--light);
@@ -68,8 +68,8 @@ ReaderMode.css = `
 }
 
 #reader-mode-button svg {
-  width: 32px;
-  height: 32px;
+  width: 45px;
+  height: 45px;
 }
 
 #reader-mode-button:hover {
@@ -81,7 +81,7 @@ ReaderMode.css = `
 .darkmode {
   width: 60px !important;
   height: 60px !important;
-  padding: 0.8rem !important;
+  padding: 0.5rem !important;
   border: 2px solid var(--lightgray) !important;
   border-radius: 8px !important;
   background: var(--light) !important;
@@ -102,8 +102,8 @@ ReaderMode.css = `
 
 .darkmode svg {
   position: relative !important;
-  width: 32px !important;
-  height: 32px !important;
+  width: 45px !important;
+  height: 45px !important;
   top: unset !important;
   fill: currentColor !important;
 }
@@ -152,12 +152,17 @@ body.reader-mode {
 `
 
 ReaderMode.afterDOMLoaded = darkmodeScript + `
-  const button = document.getElementById('reader-mode-button')
-  if (!button) return
-  
-  button.addEventListener('click', () => {
-    console.log('Reader mode toggled')
-    document.body.classList.toggle('reader-mode')
+  document.addEventListener("nav", () => {
+    const button = document.getElementById('reader-mode-button')
+    if (!button) return
+    
+    const toggleReaderMode = () => {
+      console.log('Reader mode toggled')
+      document.body.classList.toggle('reader-mode')
+    }
+    
+    button.addEventListener('click', toggleReaderMode)
+    window.addCleanup(() => button.removeEventListener('click', toggleReaderMode))
   })
 `
 

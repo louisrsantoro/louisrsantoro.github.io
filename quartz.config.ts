@@ -9,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Louis's Notes",
-    subtitle: "Philosophy PhD Candidate<br>Complex systems researcher<br>LLMS, AI alignment, geopolitics, social networks",
+    subtitle: "Philosophy PhD Candidate<br>Complex systems researcher studying LLMS, brains, geopolitics, social networks",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
