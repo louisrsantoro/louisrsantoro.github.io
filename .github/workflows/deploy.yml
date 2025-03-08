@@ -24,6 +24,10 @@ jobs:
       - name: Build
         run: npx quartz build
         
+      - name: Copy built files to root
+        run: |
+          cp -r public/* .
+        
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
