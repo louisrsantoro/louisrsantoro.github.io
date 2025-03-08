@@ -1,5 +1,4 @@
 import { QuartzComponent, QuartzComponentConstructor } from "./types"
-import darkmodeScript from "./scripts/darkmode.inline"
 
 const ReaderMode: QuartzComponent = ({ cfg }) => {
   return (
@@ -151,7 +150,7 @@ body.reader-mode {
 }
 `
 
-ReaderMode.afterDOMLoaded = darkmodeScript + `
+ReaderMode.afterDOMLoaded = `
   document.addEventListener("nav", () => {
     const button = document.getElementById('reader-mode-button')
     if (!button) return
@@ -159,10 +158,37 @@ ReaderMode.afterDOMLoaded = darkmodeScript + `
     const toggleReaderMode = () => {
       console.log('Reader mode toggled')
       document.body.classList.toggle('reader-mode')
+      
+      // Save reader mode state to localStorage
+      const isReaderMode = document.body.classList.contains('reader-mode')
+      localStorage.setItem('readerMode', isReaderMode ? 'true' : 'false')
     }
     
     button.addEventListener('click', toggleReaderMode)
     window.addCleanup(() => button.removeEventListener('click', toggleReaderMode))
+    
+    // Restore reader mode state from localStorage
+    const savedReaderMode = localStorage.getItem('readerMode')
+    if (savedReaderMode === 'true') {
+      document.body.classList.add('reader-mode')
+    }
+
+    // Handle dark mode
+    const switchTheme = (e) => {
+      const newTheme = document.documentElement.getAttribute('saved-theme') === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('saved-theme', newTheme)
+      localStorage.setItem('theme', newTheme)
+    }
+
+    const darkModeButton = document.getElementById('darkmode')
+    if (darkModeButton) {
+      darkModeButton.addEventListener('click', switchTheme)
+      window.addCleanup(() => darkModeButton.removeEventListener('click', switchTheme))
+    }
+
+    // Restore dark mode state
+    const savedTheme = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    document.documentElement.setAttribute('saved-theme', savedTheme)
   })
 `
 
