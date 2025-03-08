@@ -1,6 +1,5 @@
 ---
 title: Welcome to my page
-tags: [aboutme]
 ---
 ## Hello, I'm Louis
 
