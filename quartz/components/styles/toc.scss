@@ -33,7 +33,6 @@ button#toc {
 
   & .fold {
     margin-left: 0.5rem;
-    transition: transform 0.3s ease;
     opacity: 0.8;
   }
 
@@ -47,17 +46,11 @@ button#toc {
   overflow: hidden;
   overflow-y: auto;
   max-height: 100%;
-  transition:
-    max-height 0.35s ease,
-    visibility 0s linear 0s;
   position: relative;
   visibility: visible;
 
   &.collapsed {
     max-height: 0;
-    transition:
-      max-height 0.35s ease,
-      visibility 0s linear 0.35s;
     visibility: hidden;
   }
 
@@ -72,9 +65,6 @@ button#toc {
     & > li > a {
       color: var(--dark);
       opacity: 0.35;
-      transition:
-        0.5s ease opacity,
-        0.3s ease color;
       &.in-view {
         opacity: 0.75;
       }
