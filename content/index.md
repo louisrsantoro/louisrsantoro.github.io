@@ -16,7 +16,7 @@ where $i,j$ are entities, $\alpha$ is their relationship. J.L. Austin famously s
 
 ## Background
 
-I began my academic career in classical philology and originally studied Greek and Roman philosophy. I decided to do a PhD in philosophy because this program offered an opportunity to improve my mathematical and scientific skills while studying scientific questions from a philosophical point of view. 
+I began my academic career in classical philology and originally studied Greek and Roman philosophy. In 2019, I was torn about the decision to do a PhD in Philosophy given the dismal career prospects and my growing interests in AI. I decided to do a PhD in Philosophy because this program offered an opportunity to improve my mathematical and scientific skills while studying scientific questions from a philosophical point of view.
 
 ## Current Interests
 

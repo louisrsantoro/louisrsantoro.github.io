@@ -1,5 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor } from "./types"
-import darkmodeScript from "./scripts/darkmode.inline"
+// @ts-ignore
+import readerModeScript from "./scripts/readermode.inline"
 
 const ReaderMode: QuartzComponent = ({ cfg }) => {
   return (
@@ -151,25 +152,6 @@ body.reader-mode {
 }
 `
 
-ReaderMode.afterDOMLoaded = darkmodeScript + `
-  document.addEventListener("nav", () => {
-    const button = document.getElementById('reader-mode-button')
-    if (!button) return
-    
-    const toggleReaderMode = () => {
-      const isReaderMode = document.body.classList.toggle('reader-mode')
-      localStorage.setItem('reader-mode', isReaderMode ? 'true' : 'false')
-    }
-    
-    // Restore reader mode state on navigation
-    const savedReaderMode = localStorage.getItem('reader-mode') === 'true'
-    if (savedReaderMode) {
-      document.body.classList.add('reader-mode')
-    }
-    
-    button.addEventListener('click', toggleReaderMode)
-    window.addCleanup(() => button.removeEventListener('click', toggleReaderMode))
-  })
-`
+ReaderMode.afterDOMLoaded = readerModeScript
 
 export default (() => ReaderMode) satisfies QuartzComponentConstructor 
