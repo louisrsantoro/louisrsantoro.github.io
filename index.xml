@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Louis&#039;s Notes</title>
+      <link>https://louissantoro.com</link>
+      <description>Last 10 notes on Louis&#039;s Notes</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Euler&#039;s Identity (GPT-4.5 Generated)</title>
+    <link>https://louissantoro.com/Mathematics/eulers_identity</link>
+    <guid>https://louissantoro.com/Mathematics/eulers_identity</guid>
+    <description>Euler’s identity is often celebrated as one of mathematics’ most beautiful equations: e^{i\pi} + 1 = 0 At first glance, this elegant formula may seem mysterious or even paradoxical ...</description>
+    <pubDate>Sat, 08 Mar 2025 20:16:01 GMT</pubDate>
+  </item><item>
+    <title>Welcome to my page.</title>
+    <link>https://louissantoro.com/</link>
+    <guid>https://louissantoro.com/</guid>
+    <description>Hello, I’m Louis. I’m a lot of things, but one of the things that I am is a PhD candidate in philosophy. [Testing GitHub Actions - Updated at 2024] I will be using the space to share my notes on various topics.</description>
+    <pubDate>Sat, 08 Mar 2025 20:16:01 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
