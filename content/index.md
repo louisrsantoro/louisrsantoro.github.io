@@ -4,13 +4,13 @@ title: Welcome to my page
 
 ## Hello, I'm Louis
 
-I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy. I will be using this space to share my notes on various topics. Longer form nonacademic writing will be hosted on Substack. My interests are eclectic, but I would lump them together using the term 'complex systems'. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network of interacting entities, where interaction strength is denoted by:
+I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy. I will be using this space to share my notes on various topics. Longer form nonacademic writing will be hosted on Substack. My interests are eclectic, but I would lump them together using the term 'complex systems'. J.L. Austin famously said, "[O]ver-simplification is the occupational disease of philosophers." Oversimplification is generally the rejection of the charge to elevate the level of our thought to meet the phenomena where they are rather than reduce the phenomena to terms convenient to our thinking. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network of interacting entities, where interaction strength is denoted by:
 
 $$
 M_{ij}^\alpha(t)
 $$
 
-where $i,j$ are entities, $\alpha$ is their relationship. J.L. Austin famously said, "J.L. Austin famously said, \"We must at all costs avoid oversimplification."
+where $i,j$ are entities, $\alpha$ is their relationship. Although this powerful form of representation is oftentimes scientifically valuable, the purpose of denoting 'complex systems' as the object of study is not a methodological commitment to graphs now and forever but a metaphysical characterization of the kinds of entities and processes that interest me, philosophically.
 
 This digital garden is meant for anyone interested in philosophy, complex systems, and computational methods. You can browse recent notes or explore by topic. Notes here are often exploratory, reflecting ongoing research or preliminary thoughts, while longer form nonacademic writing on related topics is available on my [Substack](#).
 
