@@ -4,31 +4,47 @@ title: Welcome to my page
 
 ## Hello, I'm Louis
 
-I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy.
-
-I will be using this space to share my notes on various topics. My interests are eclectic, but I would lump them together using the term 'complex systems'. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network of interacting entities, where interaction strength is denoted by:
+I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy. I will be using this space to share my notes on various topics. Longer form nonacademic writing will be hosted on Substack. My interests are eclectic, but I would lump them together using the term 'complex systems'. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network of interacting entities, where interaction strength is denoted by:
 
 $$
 M_{ij}^\alpha(t)
 $$
 
-where $i,j$ are entities, $\alpha$ is their relationship. J.L. Austin famously said, "Oversimplification is the disease of philosophy." But if philosophers engage with complex systems the disease need not be terminal. Using computational methods, this powerful representational paradigm helps us analyze exquisitely complicated entities and processes from across the natural world. (Though graph theory and network theory have long been fundamental to the study of these kinds of systems, in some cases there is a tidier solution to studying them that does not require an explicit network structure.)
+where $i,j$ are entities, $\alpha$ is their relationship. J.L. Austin famously said, "J.L. Austin famously said, \"We must at all costs avoid oversimplification."
+
+This digital garden is meant for anyone interested in philosophy, complex systems, and computational methods. You can browse recent notes or explore by topic. Notes here are often exploratory, reflecting ongoing research or preliminary thoughts, while longer form nonacademic writing on related topics is available on my [Substack](#).
 
 ### Background
 
-I began my academic career in classical philology and originally studied Greek and Roman philosophy. In 2019, I was torn about the decision to do a PhD in Philosophy given the dismal career prospects and my growing interests in AI. I decided to do a PhD in Philosophy because this program offered an opportunity to improve my mathematical and scientific skills while studying scientific questions from a philosophical point of view.
+I began my academic career in classical philology and originally studied Greek and Roman philosophy. In 2019, I was torn about the decision to do a PhD in Philosophy. Ultimately, my interests shifted towards computational and theoretical approaches to understanding complex phenomena.
 
-### Current Interests
+### Research Methodologies
 
-My primary interests of now are explicitly focused on LLM and neural representations.
+I primarily use computational methods, including Python-based analytical frameworks, to study complex systems. Occasionally, I explore methods that bypass explicit network structures for simpler analytical solutions.
+
+### Future Explorations
+
+Topics and notes currently planned include:
+
+- Advanced representations in transformer architectures
+- Cognitive models of bounded rationality
+- Geopolitical risk modeling and game-theoretic frameworks
+
+### Selected Topics
 
 Some of the topics I have written on throughout my PhD are:
 
 - Content-driven social networks
 - Valuative judgment
 - Mechanistic explanation
-- Mental illness
+- Mental illness, psychiatry, therapy
 
-I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy.
+I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy, which shaped my approach to philosophy and to life in ways that a first love might.
 
-This digital garden will contain notes on these topics and others as they develop. Feel free to explore.
+### Connect With Me
+
+Feel free to explore more or connect through these platforms:
+
+- [X](#)
+- [GitHub](#)
+
