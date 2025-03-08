@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       
@@ -24,14 +22,13 @@ jobs:
       - name: Build
         run: npx quartz build
         
-      - name: Copy built files to root
-        run: |
-          cp -r public/* .
+      - name: Copy to root
+        run: cp -r public/* .
         
-      - name: Commit and Push Changes
+      - name: Commit
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
-          git commit -m "Build site" || echo "No changes to commit"
+          git commit -m "Build site" || echo "No changes"
           git push
