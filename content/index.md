@@ -36,5 +36,5 @@ I also have a reasonably extensive background in Indo-European languages and cla
 
 Feel free to explore more or connect through these platforms:
 
-- [Twitter](https://x.com/dikaiosvne)
+- [X](https://x.com/dikaiosvne)
 - [GitHub](https://github.com/louisrsantoro)

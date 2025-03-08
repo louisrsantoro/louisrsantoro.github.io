@@ -32,12 +32,19 @@ PageTitle.css = `
 .subtitle {
   font-size: 1rem;
   font-weight: normal;
-  margin-top: 0.5rem;
+  margin: 0;
   color: var(--darkgray);
 }
 .subtitle p {
   margin: 0;
   line-height: 1.5;
+  hyphens: none;
+  white-space: pre-wrap;
+  word-break: normal;
+  word-wrap: normal;
+}
+.subtitle p:first-child {
+  font-style: italic;
 }
 `
 export default (() => PageTitle) satisfies QuartzComponentConstructor

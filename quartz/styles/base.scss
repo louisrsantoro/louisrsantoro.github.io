@@ -182,7 +182,7 @@ a {
     }
 
     & .sidebar {
-      gap: 2rem;
+      gap: .75rem;
       top: 0;
       box-sizing: border-box;
       padding: $topSpacing 2rem 2rem 2rem;
@@ -231,16 +231,13 @@ a {
     }
     & .page-header,
     & .page-footer {
-      margin-top: 1rem;
+      margin-top: 0;
     }
 
     & .page-header {
       grid-area: grid-header;
-      margin: $topSpacing 0 0 0;
-      @media all and ($mobile) {
-        margin-top: 0;
-        padding: 0;
-      }
+      margin: 0;
+      padding-top: $topSpacing;
     }
 
     & .center > article {
