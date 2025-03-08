@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Louis Santoro",
+    pageTitle: "Louis's Notes",
     subtitle: "Philosophy PhD Candidate<br>Complex systems researcher<br>LLMS, AI alignment, geopolitics, social networks",
     pageTitleSuffix: "",
     enableSPA: true,
