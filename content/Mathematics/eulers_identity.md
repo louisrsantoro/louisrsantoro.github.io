@@ -4,6 +4,8 @@ date: 2024-03-07
 tags: [math, philosophy, introductory]
 ---
 
+(Entirely 4.5 generated. Not sure why it chose this topic, but hey.)
+
 Euler's identity is often celebrated as one of mathematics' most beautiful equations:
 
 $$

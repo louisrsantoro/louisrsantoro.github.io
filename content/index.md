@@ -1,15 +1,30 @@
 ---
-title: Welcome to my page.
+title: Welcome to my page
 ---
 
-Hello, I'm Louis. I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy.
+# Hello, I'm Louis
 
-I will be using the space to share my notes on various topics. My interests are eclectic, but I would lump them together using the term 'complex systems'. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network:
+I'm a lot of things, but one of the things that I am is a PhD candidate in philosophy.
+
+I will be using this space to share my notes on various topics. My interests are eclectic, but I would lump them together using the term 'complex systems'. In *Theory of complex systems*, Thurner, Hanel, Klimek define a complex system as a co-evolving multilayer network of interacting entities, where interaction strength is denoted by:
 
 $$
 M_{ij}^\alpha(t)
 $$
 
-where $i,j$ are entities, $\alpha$ is their relationship. Using computational simulations, this powerful representational paradigm helps us analyze exquisitely complicated entities and processes. J.L. Austin famously said, Oversimplification is the disease of philosophy. But if philosophers engage with complex systems the disease need not be terminal.
+where $i,j$ are entities, $\alpha$ is their relationship. J.L. Austin famously said, "Oversimplification is the disease of philosophy." But if philosophers engage with complex systems the disease need not be terminal. Using computational methods, this powerful representational paradigm helps us analyze exquisitely complicated entities and processes from across the natural world.
 
-Some of the recent topics I have studied are content-driven social networks, valuative judgment, and mental illness. I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy.
+## Background
+
+I began my academic career in classical philology and originally studied Greek and Roman philosophy. I decided to do a PhD in philosophy because this program offered an opportunity to improve my mathematical and scientific skills while studying scientific questions from a philosophical point of view. 
+
+## Current Interests
+
+Some of the topics I have recently studied are:
+- Content-driven social networks
+- Valuative judgment
+- Mental illness
+
+I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy.
+
+This digital garden will contain notes on these topics and others as they develop. Feel free to explore.
