@@ -20,9 +20,13 @@ I began my academic career in classical philology and originally studied Greek a
 
 ### Current Interests
 
-Some of the topics I have recently studied are:
+My primary interests of now are explicitly focused on LLM and neural representations.
+
+Some of the topics I have written on throughout my PhD are:
+
 - Content-driven social networks
 - Valuative judgment
+- Mechanistic explanation
 - Mental illness
 
 I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy.
