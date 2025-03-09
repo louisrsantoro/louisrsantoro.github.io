@@ -31,10 +31,3 @@ Some of the topics I have written on throughout my PhD are:
 - Mental illness, psychiatry, therapy
 
 I also have a reasonably extensive background in Indo-European languages and classical philology and philosophy, which shaped my approach to philosophy and to life in ways that a first love might.
-
-### Connect With Me
-
-Feel free to explore more or connect through these platforms:
-
-- [X](https://x.com/dikaiosvne)
-- [GitHub](https://github.com/louisrsantoro)
