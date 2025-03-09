@@ -15,12 +15,18 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: {
       provider: "plausible",
+      host: "https://plausible.io/js/script.outbound-links.js"
     },
     locale: "en-US",
-    baseUrl: "louissantoro.com",
+    baseUrl: "notes.louissantoro.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    generateSocialImages: true,
+    generateSocialImages: {
+      colorScheme: "darkMode",
+      width: 1200,
+      height: 630,
+      excludeRoot: false
+    },
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
