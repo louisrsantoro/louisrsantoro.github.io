@@ -22,10 +22,10 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     generateSocialImages: {
-      colorScheme: "darkMode",
+      colorScheme: "lightMode",
       width: 1200,
       height: 630,
-      excludeRoot: false
+      excludeRoot: false,
     },
     theme: {
       fontOrigin: "googleFonts",
