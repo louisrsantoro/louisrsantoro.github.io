@@ -4,7 +4,8 @@
   min-width: fit-content;
   max-width: 14rem;
   @media all and ($mobile) {
-    flex-grow: 0.3;
+    max-width: 100%;
+    width: 100%;
   }
 
   & > .search-button {
@@ -40,6 +41,12 @@
         transition: stroke 0.5s ease;
       }
     }
+
+    @media all and ($mobile) {
+      width: 100%;
+      justify-content: flex-start;
+      padding: 0.5rem;
+    }
   }
 
   & > #search-container {
@@ -66,6 +73,11 @@
 
       @media all and not ($desktop) {
         width: 90%;
+      }
+
+      @media all and ($mobile) {
+        width: 95%;
+        margin-top: 5vh;
       }
 
       & > * {

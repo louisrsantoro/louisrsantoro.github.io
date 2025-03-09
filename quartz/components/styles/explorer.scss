@@ -2,19 +2,18 @@
 
 @media all and ($mobile) {
   .page > #quartz-body {
-    // Shift page position when toggling Explorer on mobile.
+    // Remove page shifting behavior
     & > :not(.sidebar.left:has(.explorer)) {
-      transition: transform 300ms ease-in-out;
+      transition: none;
     }
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
-      transform: translateX(100dvw);
-      transition: transform 300ms ease-in-out;
+      transform: none;
+      transition: none;
     }
 
-    // Sticky top bar (stays in place when scrolling down on mobile).
+    // Adjust explorer position
     .sidebar.left:has(.explorer) {
-      box-sizing: border-box;
-      position: sticky;
+      position: static;
       background-color: var(--light);
     }
 
@@ -33,11 +32,9 @@
   overflow-y: hidden;
 
   @media all and ($mobile) {
-    order: -1;
-    height: initial;
-    overflow: hidden;
-    flex-shrink: 0;
-    align-self: flex-start;
+    order: 0;
+    height: auto;
+    overflow: visible;
   }
 
   button#mobile-explorer {
@@ -244,53 +241,23 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       box-sizing: border-box;
       overscroll-behavior: none;
       z-index: 100;
-      position: absolute;
-      top: 0;
+      position: relative;
       background-color: var(--light);
-      max-width: 100dvw;
-      left: -100dvw;
       width: 100%;
-      transition: transform 300ms ease-in-out;
-      overflow: hidden;
-      padding: $topSpacing 2rem 2rem;
-      height: 100dvh;
-      max-height: 100dvh;
+      padding: 1rem 0;
+      height: auto;
+      max-height: none;
       margin-top: 0;
-      visibility: hidden;
-
-      &:not(.collapsed) {
-        transform: translateX(100dvw);
-        visibility: visible;
-      }
+      visibility: visible;
 
       ul.overflow {
-        max-height: 100%;
+        max-height: none;
         width: 100%;
-      }
-
-      &.collapsed {
-        transform: translateX(0);
-        visibility: visible;
       }
     }
 
     #mobile-explorer {
-      margin: 5px;
-      z-index: 101;
-
-      &:not(.collapsed) .lucide-menu {
-        transform: rotate(-90deg);
-        transition: transform 200ms ease-in-out;
-      }
-
-      .lucide-menu {
-        stroke: var(--darkgray);
-        transition: transform 200ms ease;
-
-        &:hover {
-          stroke: var(--dark);
-        }
-      }
+      display: none;
     }
   }
 }
@@ -312,5 +279,17 @@ html:has(.no-scroll) {
 
   html:has(.no-scroll) {
     overflow: auto !important;
+  }
+}
+
+.social-links {
+  @media all and ($mobile) {
+    width: 100%;
+    
+    .links-container {
+      padding: 0;
+      justify-content: flex-start;
+      width: 100%;
+    }
   }
 }

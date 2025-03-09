@@ -125,29 +125,14 @@ a {
 .page {
   max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
-  & article {
-    & > h1 {
-      font-size: 2rem;
-    }
+  padding: 0 1rem;
 
-    & li:has(> input[type="checkbox"]) {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    & li:has(> input[type="checkbox"]:checked) {
-      text-decoration: line-through;
-      text-decoration-color: var(--gray);
-      color: var(--gray);
-    }
-
-    & li > * {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    p > strong {
-      color: var(--dark);
+  @media all and ($mobile) {
+    padding: 0 1rem;
+    
+    article {
+      font-size: 1rem;
+      line-height: 1.6;
     }
   }
 
@@ -196,14 +181,15 @@ a {
       grid-area: grid-sidebar-left;
       flex-direction: column;
       @media all and ($mobile) {
-        gap: 0;
-        align-items: center;
-        position: initial;
+        gap: 0.5rem;
+        align-items: flex-start;
+        position: static;
         display: flex;
-        height: unset;
-        flex-direction: row;
-        padding: 0;
-        padding-top: 2rem;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+        width: 100%;
+        background-color: var(--light);
       }
     }
 
@@ -258,8 +244,9 @@ a {
         margin-right: 0;
       }
       @media all and ($mobile) {
-        margin-right: 0;
-        margin-left: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
       }
     }
     & footer {
