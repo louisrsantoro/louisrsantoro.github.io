@@ -13,15 +13,17 @@ I began my academic career in classical philology with a view to reading the Gre
 
 ### Why publish these notes
 
-I took a long retreat from any online presence and any attempt to publish any work publicly for about 7 years starting in 2020. I noticed that academic publishing encourages a philosopher to write work that simply isn't important and that the odds of producing something genuinely valuable on one's own, something *aere perennius*, were almost zero in the first place. Publishing is not very difficult. I thought that perhaps I should study enough that I can think and say something worth communicating. I have reasonably extensive notes in other forms, but some of the books that I read or things that occurred to me during that time are probably forever lost. Some of the topics I covered in my early intellectual career I may never cover again. This archive is intended to capture what happens from here.
+I took a long retreat from any online presence and any attempt to publish any work publicly for about 7 years starting in 2020. I noticed that academic publishing encourages a philosopher to write work that simply isn't important and that the odds of producing something genuinely valuable on one's own, something *aere perennius*, were almost zero in the first place. Publishing is not very difficult. I thought that perhaps I should study enough that I can think and say something worth communicating. That's what I've been doing while I've been away. I have reasonably extensive notes in other forms, but some of the books that I read or things that occurred to me during that time are probably forever lost. Some of the topics I covered in my early intellectual career I may never cover again. I will use this archive in order to capture what happens from here on out.
 
 ### A request
 
 I fancy myself a creative intellectual. Anyone with any real creativity has an inexhaustible treasury of ideas, issued by fiat in the shower or on a walk to the store. It's actually overwhelming to have so many good ideas. Anything I share here is free, without the expectation of payment. But, as a matter of principle, I always attempt to provide others the courtesy of acknowledging my indebtedness to their ideas, to respect their rights by attributing ideas that are not my own. I don't like intellectual theft; I also don't like the idea of clamping down, charging money, making an ugly website, etc. If you see any value in the way that I approach these questions, I would be grateful if you did not begrudge me the satisfaction of knowing that my writing made some difference for you. Credit my work where appropriate, even just find a way to say thank you. That way you can make a friend rather than a bitter, lifelong enemy.
 
-### Research Methodologies
+### Research methodologies
 
 My research largely uses computational methods in order to study and solve problems over [[Complexity/philosophy_of_complexity|complex systems]]. Though 'complex systems' often denotes a network approach, I explore methods that bypass explicit network structures if doing so is useful. Each of the last three years has been oriented toward a different project. In order of most recent to least: a paper modeling influence maximization in content-driven social networks, a paper on a decision theoretic approach to valuative takings, and a paper arguing for a bottom up, network approach to schizophrenia.
+
+I should also say that I'm a reasonably serious classicist, though my skills in reading ancient texts has atrophied since I went quantitative. [[https://scholarworks.calstate.edu/downloads/fb494f561 || My MA thesis on the philosopher Chrysippus's theory of impressions]] reflects something of a culmination of that work and can be viewed here.
 
 ### Future Explorations
 
