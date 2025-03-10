@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "notes.louissantoro.com",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "terms.md"],
     defaultDateType: "modified",
     generateSocialImages: {
       colorScheme: "lightMode",
@@ -76,8 +76,15 @@ const config: QuartzConfig = {
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.TableOfContents({
+        collapseByDefault: true,
+        minEntries: 1,
+      }),
+      Plugin.CrawlLinks({ 
+        markdownLinkResolution: "shortest",
+        openLinksInNewTab: true,
+        externalLinkIcon: false
+      }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
