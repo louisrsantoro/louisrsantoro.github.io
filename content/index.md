@@ -1,9 +1,9 @@
 ---
-title: Well, hello there.
+title: Hello there, I'm Louis.
 
 ---
 
-##  I'm Louis. Welcome to my page.
+##  Welcome to my page.
 
 Thank you for visiting my website! I'm a lot of things, but one of the things that I am is a PhD candidate in Philosophy. This digital garden serves as a repository for my learning in computation, complex systems, and philosophy. The site is designed to be fast, text-focused, distraction free, and easy to read. Notes can be searched, browsed by recency, or explored by topic. The writing here is often a memento of a topic, an exploratory thoughts, or reflect fragments of ongoing research, while longer form nonacademic writing on related topics will be available on my [main site](https://louissantoro.com). I plan to publish notes as I study to provide myself and anyone interested a permanently accessible archive of the topics I cover along the way. I will always strive for accuracy in producing these notes. Since they are learning-oriented, they may not be expertly analyzed and will transform the content from existing articles or textbooks, which I will always credit and mention. Be sure to consult those.
 
