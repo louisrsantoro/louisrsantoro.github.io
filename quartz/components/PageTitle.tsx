@@ -44,7 +44,7 @@ PageTitle.css = `
   line-height: 0;
 }
 .logo {
-  height: 3.5rem;
+  height: 4.5rem;
   width: auto;
   display: none;
   margin: 0;

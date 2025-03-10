@@ -27,17 +27,24 @@ const SocialLinks: QuartzComponent = () => {
 
 SocialLinks.css = `
 .social-links {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 0.1rem 0;
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .links-container {
   display: flex;
-  gap: 0.8rem;
+  gap: 1.5rem;
   align-items: center;
-  padding-left: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .links-container a {
@@ -45,6 +52,7 @@ SocialLinks.css = `
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .links-container a:hover {
@@ -54,6 +62,20 @@ SocialLinks.css = `
 .links-container svg {
   width: 30px;
   height: 30px;
+}
+
+/* Override any explorer or mobile styles */
+@media all and (max-width: 600px) {
+  .social-links,
+  .links-container {
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0.5rem auto !important;
+  }
 }
 `
 
