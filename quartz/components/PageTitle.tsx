@@ -46,7 +46,7 @@ PageTitle.css = `
 .logo {
   height: 3.5rem;
   width: auto;
-  display: block;
+  display: none;
   margin: 0;
   padding: 0;
 }
