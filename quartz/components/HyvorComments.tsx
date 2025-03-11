@@ -25,15 +25,10 @@ export default ((opts: Options) => {
     // Get the page ID for this specific page
     const pageId = fileData.slug || 'index'
     
-    // Create the HTML for Hyvor Talk comments with a unique container ID
+    // Create the HTML for comments container and button
     const commentsHtml = `
-      <div id="hyvor-talk-container">
-        <hyvor-talk-comments
-          website-id="${opts.websiteId}"
-          page-id="${pageId}"
-          colors="${opts.displayDarkMode ? "dark" : "light"}"
-          loading="manual"
-        ></hyvor-talk-comments>
+      <div id="hyvor-talk-view" data-page-id="${pageId}">
+        <!-- Comments will be inserted here when button is clicked -->
       </div>
       
       <button 
@@ -48,13 +43,12 @@ export default ((opts: Options) => {
     return (
       <div 
         class={`comments-container ${displayClass ?? ""}`}
-        data-current-page-id="${pageId}"
         dangerouslySetInnerHTML={{ __html: commentsHtml }}
       ></div>
     )
   }
 
-  // Add the script to load the Hyvor Talk web component
+  // Add the script to load the Hyvor Talk web component only once
   HyvorComments.beforeDOMLoaded = `
     // Only add the script if it's not already in the document
     if (!document.getElementById('hyvor-talk-script')) {
@@ -67,95 +61,85 @@ export default ((opts: Options) => {
     }
   `
 
-  // Handle button click and navigation events
+  // Handle button click to load comments
   HyvorComments.afterDOMLoaded = `
-    // Function to completely reset and set up Hyvor comments
-    function setupHyvorComments() {
-      // Find the button and comments container
+    // Function to handle button click
+    function handleLoadCommentsClick() {
       const button = document.getElementById('load-comments-button');
-      const commentsContainer = document.querySelector('.comments-container');
-      if (!button || !commentsContainer) return;
+      const commentView = document.getElementById('hyvor-talk-view');
       
-      // Get current path for page ID
-      const path = window.location.pathname;
-      const currentPageId = path === '/' ? 'index' : path.replace(/^\\//g, '').replace(/\\/$/, '');
+      if (!button || !commentView) return;
       
-      // Compare the data attribute to see if we've navigated to a new page
-      const storedPageId = commentsContainer.getAttribute('data-current-page-id');
+      button.textContent = 'Loading...';
+      button.disabled = true;
       
-      // If this is a new page or the comments section needs reset
-      if (storedPageId !== currentPageId) {
-        // Update the data attribute
-        commentsContainer.setAttribute('data-current-page-id', currentPageId);
-        
-        // Recreate the Hyvor Talk container completely - this is key to prevent persistence
-        const talkContainer = document.getElementById('hyvor-talk-container');
-        if (talkContainer) {
-          // Create a fresh container with updated page-id
-          const newContainer = document.createElement('div');
-          newContainer.id = 'hyvor-talk-container';
-          newContainer.innerHTML = \`
-            <hyvor-talk-comments
-              website-id="${opts.websiteId}"
-              page-id="\${currentPageId}"
-              colors="${opts.displayDarkMode ? "dark" : "light"}"
-              loading="manual"
-            ></hyvor-talk-comments>
-          \`;
-          
-          // Replace the old container
-          talkContainer.parentNode.replaceChild(newContainer, talkContainer);
-          
-          // Reset button text
-          button.textContent = 'Load Comments';
-        }
-      }
+      // Get the current page ID
+      const pageId = commentView.getAttribute('data-page-id') || 
+                    (window.location.pathname === '/' ? 'index' : 
+                    window.location.pathname.replace(/^\\//g, '').replace(/\\/$/, ''));
       
-      // Remove any existing event listener to prevent duplicates
+      // Clear any existing content
+      commentView.innerHTML = '';
+      
+      // Create the comments element following the docs exactly
+      const commentsElement = document.createElement('hyvor-talk-comments');
+      commentsElement.setAttribute('website-id', '${opts.websiteId}');
+      commentsElement.setAttribute('page-id', pageId);
+      commentsElement.setAttribute('colors', '${opts.displayDarkMode ? "dark" : "light"}');
+      
+      // Insert it into the DOM
+      commentView.appendChild(commentsElement);
+      
+      // Update button
+      button.textContent = 'Refresh Comments';
+      button.disabled = false;
+    }
+    
+    // Set up the click handler for the button
+    function setupButton() {
+      const button = document.getElementById('load-comments-button');
+      if (!button) return;
+      
+      // Clone button to remove any existing listeners
       const newButton = button.cloneNode(true);
       if (button.parentNode) {
         button.parentNode.replaceChild(newButton, button);
       }
       
-      // Add click handler to the button
-      newButton.addEventListener('click', function() {
-        const commentsEl = document.querySelector('hyvor-talk-comments');
-        if (commentsEl) {
-          // Ensure the page-id is current
-          const currentPageId = commentsContainer.getAttribute('data-current-page-id');
-          commentsEl.setAttribute('page-id', currentPageId);
-          
-          // Load the comments
-          if (typeof commentsEl.load === 'function') {
-            commentsEl.load();
-            newButton.textContent = 'Refresh Comments';
-          } else {
-            // Wait for the component to be defined if needed
-            customElements.whenDefined('hyvor-talk-comments').then(() => {
-              if (commentsEl && typeof commentsEl.load === 'function') {
-                commentsEl.load();
-                newButton.textContent = 'Refresh Comments';
-              }
-            });
-          }
-        }
-      });
+      // Add click handler
+      newButton.addEventListener('click', handleLoadCommentsClick);
       
-      // Register for cleanup on navigation
+      // Register for cleanup
       if (window.addCleanup) {
         window.addCleanup(() => {
-          newButton.removeEventListener('click', newButton.onclick);
+          newButton.removeEventListener('click', handleLoadCommentsClick);
         });
       }
     }
     
-    // Set up on initial page load
-    setupHyvorComments();
+    // Initial setup
+    setupButton();
     
-    // Handle SPA navigation as per Quartz docs
+    // Handle SPA navigation
     document.addEventListener('nav', () => {
-      // Run setup again after navigation with a slight delay to ensure DOM is updated
-      setTimeout(setupHyvorComments, 100);
+      // Update the data-page-id attribute on navigation
+      const commentView = document.getElementById('hyvor-talk-view');
+      if (commentView) {
+        const pageId = window.location.pathname === '/' ? 'index' : 
+                      window.location.pathname.replace(/^\\//g, '').replace(/\\/$/, '');
+        commentView.setAttribute('data-page-id', pageId);
+        commentView.innerHTML = ''; // Clear existing comments
+      }
+      
+      // Reset button
+      const button = document.getElementById('load-comments-button');
+      if (button) {
+        button.textContent = 'Load Comments';
+        button.disabled = false;
+      }
+      
+      // Re-setup button
+      setupButton();
     });
   `
 
@@ -179,6 +163,11 @@ export default ((opts: Options) => {
     
     .load-comments-button:hover {
       background-color: var(--gray);
+    }
+    
+    .load-comments-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
     
     html[data-theme="dark"] .load-comments-button {
