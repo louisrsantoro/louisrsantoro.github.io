@@ -22,6 +22,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import ReaderMode from "./ReaderMode"
 import SocialLinks from "./SocialLinks"
+import HyvorComments from "./HyvorComments"
 
 export {
   ArticleTitle,
@@ -48,4 +49,5 @@ export {
   Comments,
   ReaderMode,
   SocialLinks,
+  HyvorComments,
 }
