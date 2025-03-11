@@ -21,7 +21,7 @@ I fancy myself a creative intellectual. Anyone with any real creativity has an i
 
 ### Research methodologies
 
-My research largely consists of the use of computational methods in order to study and solve problems over [[Complexity/philosophy_of_complexity|complex systems]]. Though 'complex systems' often denotes a network approach, I explore methods that bypass explicit network structures if doing so is useful. One of my PhD advisors in particular has instilled in me model and method selection sensitive to the structure of the problem. I would Each of the last three years has been oriented toward a different project. In order of most recent to least: a paper modeling influence maximization in content-driven social networks, a paper on a decision theoretic approach to valuative takings, and a paper arguing for a bottom up, network approach to schizophrenia.
+My research largely consists of the use of computational methods in order to study and solve problems over complex systems. Though 'complex systems' often denotes a network approach, I explore methods that bypass explicit network structures if doing so is useful. One of my PhD advisors in particular has instilled in me model and method selection sensitive to the structure of the problem. I would Each of the last three years has been oriented toward a different project. In order of most recent to least: a paper modeling influence maximization in content-driven social networks, a paper on a decision theoretic approach to valuative takings, and a paper arguing for a bottom up, network approach to schizophrenia.
 
 ### Future explorations
 
