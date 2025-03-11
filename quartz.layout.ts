@@ -5,7 +5,25 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.Graph()],
+  afterBody: [
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "louisrsantoro/louisrsantoro.github.io",
+        repoId: "R_kgDOOFG9TA",
+        category: "Comments",
+        categoryId: "DIC_kwDOOFG9TM4Cn0Ot",
+        mapping: "pathname",
+        strict: true,
+        reactionsEnabled: true,
+        inputPosition: "bottom",
+        themeUrl: "https://notes.louissantoro.com/static/giscus",
+        lightTheme: "light",
+        darkTheme: "dark"
+      }
+    }),
+    Component.Graph()
+  ],
   footer: Component.Footer({
     links: {
       "X/Twitter": "https://x.com/dikaiosvne",
@@ -31,7 +49,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Backlinks(),
+    Component.Backlinks()
   ],
 }
 
