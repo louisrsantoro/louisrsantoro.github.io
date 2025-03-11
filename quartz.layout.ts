@@ -17,7 +17,7 @@ export const sharedPageComponents: SharedLayout = {
         strict: true,
         reactionsEnabled: true,
         inputPosition: "bottom",
-        themeUrl: "https://notes.louissantoro.com/static/giscus",
+        themeUrl: "https://notes.louissantoro.com/quartz/static/giscus",
         lightTheme: "light",
         darkTheme: "dark"
       }
