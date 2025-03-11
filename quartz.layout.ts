@@ -5,13 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [
-    Component.Graph(),
-    Component.HyvorComments({
-      websiteId: 12725,
-      displayDarkMode: true,
-    }),
-  ],
+  afterBody: [],
   footer: Component.Footer(),
 }
 
