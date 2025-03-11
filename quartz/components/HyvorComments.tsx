@@ -63,6 +63,47 @@ export default ((opts: Options) => {
 
   // Handle button click to load comments
   HyvorComments.afterDOMLoaded = `
+    // Create global variable to track theme observer
+    window.hyvorThemeObserver = window.hyvorThemeObserver || null;
+    
+    // Function to get the current theme from the document
+    function getCurrentTheme() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    }
+    
+    // Function to update all Hyvor Talk comments' themes on the page
+    function updateAllCommentsThemes(theme) {
+      const allComments = document.querySelectorAll('hyvor-talk-comments');
+      allComments.forEach(comment => {
+        comment.setAttribute('colors', theme);
+      });
+    }
+    
+    // Function to set up the theme observer once for the entire page
+    function setupGlobalThemeObserver() {
+      // Only set up once
+      if (window.hyvorThemeObserver) return;
+      
+      // Create a mutation observer to watch for theme changes on the HTML element
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'data-theme') {
+            const theme = getCurrentTheme();
+            updateAllCommentsThemes(theme);
+          }
+        });
+      });
+      
+      // Start observing the document element for theme changes
+      observer.observe(document.documentElement, { 
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
+      
+      // Store the observer for later reference
+      window.hyvorThemeObserver = observer;
+    }
+    
     // Function to handle button click
     function handleLoadCommentsClick() {
       const button = document.getElementById('load-comments-button');
@@ -85,7 +126,10 @@ export default ((opts: Options) => {
       const commentsElement = document.createElement('hyvor-talk-comments');
       commentsElement.setAttribute('website-id', '${opts.websiteId}');
       commentsElement.setAttribute('page-id', pageId);
-      commentsElement.setAttribute('colors', '${opts.displayDarkMode ? "dark" : "light"}');
+      
+      // Set colors based on current theme
+      const theme = getCurrentTheme();
+      commentsElement.setAttribute('colors', theme);
       
       // Insert it into the DOM
       commentView.appendChild(commentsElement);
@@ -116,6 +160,9 @@ export default ((opts: Options) => {
         });
       }
     }
+    
+    // Set up the global theme observer immediately
+    setupGlobalThemeObserver();
     
     // Initial setup
     setupButton();
