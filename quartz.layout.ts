@@ -1,13 +1,10 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import ThemeSync from "./quartz/components/ThemeSync"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [
-    ThemeSync(),
-  ],
+  header: [],
   afterBody: [
     Component.Graph(),
     Component.HyvorComments({
@@ -31,11 +28,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.SocialLinks(),
+    Component.MainDomainLink(),
     Component.Search(),
     Component.Explorer(),
   ],
   right: [
-    Component.Backlinks(),
   ],
 }
 
@@ -46,6 +43,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.SocialLinks(),
+    Component.MainDomainLink(),
     Component.Search(),
     Component.Explorer(),
   ],

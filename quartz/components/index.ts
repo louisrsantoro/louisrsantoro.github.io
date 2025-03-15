@@ -23,7 +23,7 @@ import Comments from "./Comments"
 import ReaderMode from "./ReaderMode"
 import SocialLinks from "./SocialLinks"
 import HyvorComments from "./HyvorComments"
-import ThemeSync from "./ThemeSync"
+import MainDomainLink from "./MainDomainLink"
 
 export {
   ArticleTitle,
@@ -51,5 +51,5 @@ export {
   ReaderMode,
   SocialLinks,
   HyvorComments,
-  ThemeSync,
+  MainDomainLink,
 }

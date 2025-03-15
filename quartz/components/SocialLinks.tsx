@@ -32,6 +32,7 @@ SocialLinks.css = `
   justify-content: center;
   align-items: center;
   margin: 0.5rem auto;
+  margin-top: -0.25rem;
   width: 100%;
   max-width: 100%;
   padding: 0;
