@@ -1,11 +1,20 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import ThemeSync from "./quartz/components/ThemeSync"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
-  afterBody: [],
+  header: [
+    ThemeSync(),
+  ],
+  afterBody: [
+    Component.Graph(),
+    Component.HyvorComments({
+      websiteId: 12725,
+      displayDarkMode: true,
+    }),
+  ],
   footer: Component.Footer(),
 }
 
