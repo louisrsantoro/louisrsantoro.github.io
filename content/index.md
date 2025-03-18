@@ -23,13 +23,20 @@ I enjoy sharing my ideas openly and freely. I would hope to create the atmospher
 
 My research largely consists of the use of computational methods in order to study and solve problems over complex systems. Though 'complex systems' often denotes a network approach, I explore methods that bypass explicit network structures if doing so is useful. One of my PhD advisors in particular has instilled in me model and method selection sensitive to the structure of the problem. I would Each of the last three years has been oriented toward a different project. In order of most recent to least: a paper modeling influence maximization in content-driven social networks, a paper on a decision theoretic approach to valuative takings, and a paper arguing for a bottom up, network approach to schizophrenia.
 
-### Future explorations
+### Research  
+My research largely focuses on computational and theoretical approaches to understanding complex phenomena. Although each year tends to have a different focus, my projects have included:
 
-Recently, I have become interested:
+- Modeling influence maximization in content-driven social networks
+- A decision-theoretic approach to valuative interpretation
+- A bottom-up, network-based approach to understanding complex mental phenomena
 
-- Advanced representations in transformer architectures
-- Biology-based learning architectures in investigable organisms
-- Geopolitical and geoeconomic modeling.
+### Future explorations  
+My current interests include, but aren't limited to:
+
+- Advanced modeling of transformer-based AI architectures
+- Biology-inspired cognitive architectures
+- Computational modeling of geopolitics and social systems
+- Philosophical foundations of complexity science
 
 ### Closing out
 
